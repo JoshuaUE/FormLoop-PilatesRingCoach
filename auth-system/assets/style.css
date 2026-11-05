@@ -1,0 +1,227 @@
+:root {
+    color-scheme: light;
+    --ink: #17232c;
+    --muted: #66737c;
+    --paper: #fffdf8;
+    --line: #d9ddd9;
+    --accent: #176b5b;
+    --accent-dark: #0f5044;
+    --error-bg: #fff0ed;
+    --error-ink: #9a2f22;
+    --success-bg: #eaf7ef;
+    --success-ink: #17613c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 16px;
+    display: grid;
+    place-items: center;
+    color: var(--ink);
+    background:
+        linear-gradient(135deg, rgba(23, 107, 91, 0.1), transparent 45%),
+        #eef1eb;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-card {
+    width: min(100%, 430px);
+    padding: 38px;
+    border: 1px solid rgba(23, 35, 44, 0.12);
+    border-radius: 6px;
+    background: var(--paper);
+    box-shadow: 0 18px 55px rgba(23, 35, 44, 0.12);
+}
+
+.brand {
+    margin-bottom: 22px;
+    color: var(--accent);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 8vw, 2.65rem);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.intro {
+    margin: 0 0 26px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    margin-top: 7px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+}
+
+input:focus {
+    border-color: var(--accent);
+    outline: 3px solid rgba(23, 107, 91, 0.14);
+}
+
+button,
+.button-link {
+    min-height: 46px;
+    margin-top: 12px;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--accent);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button-link:hover {
+    background: var(--accent-dark);
+}
+
+button.secondary {
+    background: var(--ink);
+}
+
+a {
+    color: var(--accent-dark);
+    font-weight: 650;
+    text-underline-offset: 3px;
+}
+
+.form-options {
+    margin: 2px 0 3px;
+    text-align: right;
+    font-size: 0.88rem;
+}
+
+.form-link {
+    margin: 24px 0 0;
+    color: var(--muted);
+    text-align: center;
+}
+
+.link-stack {
+    margin-top: 24px;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+}
+
+.message {
+    margin: 0 0 12px;
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.message.error {
+    color: var(--error-ink);
+    background: var(--error-bg);
+    border-left: 4px solid #c94b3c;
+}
+
+.message.success {
+    color: var(--success-ink);
+    background: var(--success-bg);
+    border-left: 4px solid #2c9060;
+}
+
+.message.neutral {
+    margin-top: 22px;
+    color: var(--muted);
+    background: #f0f2ef;
+}
+
+.dashboard-card {
+    text-align: center;
+}
+
+.success-mark {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 24px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--success-bg);
+    color: var(--success-ink);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.inbox-message {
+    margin-top: 24px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #fff;
+}
+
+.reset-code {
+    margin: 14px 0;
+    padding: 14px;
+    border: 1px dashed var(--accent);
+    background: var(--success-bg);
+    color: var(--accent-dark);
+    font-family: Consolas, Monaco, monospace;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-align: center;
+}
+
+.fine-print {
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.inbox-message .button-link {
+    display: block;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 0;
+        place-items: stretch;
+    }
+
+    .auth-card {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 22px;
+        border: 0;
+        border-radius: 0;
+    }
+}

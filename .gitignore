@@ -1,0 +1,10 @@
+# Local database configuration
+/config.php
+/auth-system/config/db.php
+
+# Runtime data
+/auth-system/storage/*.log
+
+# Local/editor files
+.DS_Store
+.vscode/
